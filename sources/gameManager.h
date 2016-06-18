@@ -9,5 +9,15 @@
 #ifndef gameManager_h
 #define gameManager_h
 
+#include <iostream>
+
+class gameManager {
+    
+public:
+    static gameManager* getInstance();
+    gameManager();
+    bool init();
+    void sayHello();
+};
 
 #endif /* gameManager_h */

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D8A762751D14EED400A1405D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A762741D14EED400A1405D /* main.cpp */; };
+		D8A762811D15014300A1405D /* gameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8A7627F1D15014300A1405D /* gameManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		D8A762711D14EED400A1405D /* mylive_C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mylive_C; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A762741D14EED400A1405D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D8A7627E1D15001A00A1405D /* gameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gameManager.h; path = sources/gameManager.h; sourceTree = SOURCE_ROOT; };
+		D8A7627F1D15014300A1405D /* gameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gameManager.cpp; path = sources/gameManager.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A762731D14EED400A1405D /* mylive_C */,
+				D8A7627C1D14F1E700A1405D /* sources */,
 				D8A762721D14EED400A1405D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +63,16 @@
 			children = (
 				D8A762741D14EED400A1405D /* main.cpp */,
 			);
+			path = mylive_C;
+			sourceTree = "<group>";
+		};
+		D8A7627C1D14F1E700A1405D /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				D8A7627E1D15001A00A1405D /* gameManager.h */,
+				D8A7627F1D15014300A1405D /* gameManager.cpp */,
+			);
+			name = sources;
 			path = mylive_C;
 			sourceTree = "<group>";
 		};
@@ -119,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A762751D14EED400A1405D /* main.cpp in Sources */,
+				D8A762811D15014300A1405D /* gameManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
