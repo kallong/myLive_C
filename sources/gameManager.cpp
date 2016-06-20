@@ -7,11 +7,16 @@
 //
 
 #include "gameManager.h"
+#include "controlManager.h"
 
 static gameManager *m_gameManger = nullptr;
 
 gameManager::gameManager() {
     
+}
+
+gameManager::~gameManager() {
+    delete m_gameManger;
 }
 
 gameManager* gameManager::getInstance() {
@@ -24,8 +29,29 @@ gameManager* gameManager::getInstance() {
 }
 
 bool gameManager::init() {
+    m_running = true;
+    loopCount = 0;
     std::cout << "gameManager init over\n";
     return true;
+}
+
+bool gameManager::gameLoop() {
+    auto m_controlManager = controlManager::getInstance();
+    m_controlManager->printCmd();
+    std::cout << "loop " << loopCount << "\n";
+    loopCount++;
+    m_controlManager->getCmd();
+    bool CMDIsDone = m_controlManager->doCMD();
+    if (!CMDIsDone) {
+        std::cout << "CMD do fied...\n";
+        assert(CMDIsDone);
+    }
+    if (!m_running) return false;
+    return true;
+}
+
+void gameManager::quit() {
+    m_running = false;
 }
 
 void gameManager::sayHello() {

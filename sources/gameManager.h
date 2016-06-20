@@ -9,14 +9,23 @@
 #ifndef gameManager_h
 #define gameManager_h
 
-#include <iostream>
+#include "baseHeader.h"
+#include <assert.h>
+
 
 class gameManager {
+    
+private:
+    bool m_running;
+    unsigned int loopCount;
     
 public:
     static gameManager* getInstance();
     gameManager();
+    ~gameManager();
     bool init();
+    bool gameLoop();
+    void quit();
     void sayHello();
 };
 

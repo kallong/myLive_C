@@ -16,14 +16,19 @@ void _sleep(float m_time) {
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    gameManager *m_gameManager = gameManager::getInstance();
+    auto m_gameManager = gameManager::getInstance();
     m_gameManager->sayHello();
     
     gameManager::getInstance()->sayHello();
     
-    for (int i = 0; i < 10; i++) {
-        std::cout << "Hello, World!\n";
-        _sleep(0.2);
+//    for (int i = 0; i < 10; i++) {
+//        std::cout << "Hello, World!\n";
+//        _sleep(0.2);
+//    }
+    
+    while (true) {
+        if (!m_gameManager->gameLoop()) break;
     }
+    
     return 0;
 }
