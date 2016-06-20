@@ -31,12 +31,14 @@ gameManager* gameManager::getInstance() {
 bool gameManager::init() {
     m_running = true;
     loopCount = 0;
+
+	m_controlManager = controlManager::getInstance();
+
     std::cout << "gameManager init over\n";
     return true;
 }
 
 bool gameManager::gameLoop() {
-    auto m_controlManager = controlManager::getInstance();
     m_controlManager->printCmd();
     std::cout << "loop " << loopCount << "\n";
     loopCount++;

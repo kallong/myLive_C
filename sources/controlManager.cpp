@@ -22,22 +22,24 @@ controlManager::~controlManager() {
 controlManager* controlManager::getInstance() {
     if (!m_controlManager) {
         m_controlManager = new controlManager();
-        std::cout << "new gameManager...\n";
+        std::cout << "new controlManager...\n";
         m_controlManager->init();
     }
     return m_controlManager;
 }
 
 bool controlManager::init() {
-    std::cout << "gameManager init over\n";
+    std::cout << "controlManager init over\n";
     return true;
 }
 
 void controlManager::getCmd() {
-    std::cin >>m_cmd;
+    // std::cin >>m_cmd;
+	getline(std::cin, m_cmd);
 }
 
 bool controlManager::doCMD() {
+	std::cout << m_cmd << std::endl;
     if (m_cmd == "quit") {
         gameManager::getInstance()->quit();
     }

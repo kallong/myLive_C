@@ -18,7 +18,8 @@ class gameManager {
 private:
     bool m_running;
     unsigned int loopCount;
-    
+	controlManager *m_controlManager;
+
 public:
     static gameManager* getInstance();
     gameManager();

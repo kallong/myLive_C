@@ -15,7 +15,7 @@ class controlManager {
     
 private:
     std::string m_cmd;
-    
+
 public:
     static controlManager* getInstance();
     controlManager();
