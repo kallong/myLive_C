@@ -16,7 +16,7 @@ void _sleep(float m_time) {
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    auto m_gameManager = gameManager::getInstance();
+    auto m_gameManager = gameManager::gameInit();
     m_gameManager->sayHello();
     
     gameManager::getInstance()->sayHello();

@@ -9,7 +9,11 @@
 #ifndef baseHeader_h
 #define baseHeader_h
 
+#include <stdio.h>
 #include <iostream>
 #include <string>
+#include <assert.h>
+
+#include "typeHeader.h"
 
 #endif /* baseHeader_h */

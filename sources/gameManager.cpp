@@ -7,7 +7,6 @@
 //
 
 #include "gameManager.h"
-#include "controlManager.h"
 
 static gameManager *m_gameManger = nullptr;
 
@@ -32,8 +31,15 @@ bool gameManager::init() {
     m_running = true;
     loopCount = 0;
 
+    m_poolManager = poolManager::getInstance();
 	m_controlManager = controlManager::getInstance();
 
+    setGameStatus(GS::GS_NORMAL);
+    if (getGameStatus() == GS::GS_FIGHT)
+        std::cout << getGameStatus() << std::endl;
+    else
+        std::cout << "hehe" << std::endl;
+    
     std::cout << "gameManager init over\n";
     return true;
 }
@@ -54,6 +60,14 @@ bool gameManager::gameLoop() {
 
 void gameManager::quit() {
     m_running = false;
+}
+
+void gameManager::setGameStatus(GS m_type) {
+    m_gameStatus = (unsigned int)m_type;
+}
+
+unsigned int gameManager::getGameStatus() {
+    return m_gameStatus;
 }
 
 void gameManager::sayHello() {
