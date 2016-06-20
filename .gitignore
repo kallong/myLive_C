@@ -28,4 +28,11 @@
 *.out
 *.app
 
+*.sdf
+*.suo
+*.opensdf
+
+ipch
+Debug
+
 mylive_C.xcodeproj
