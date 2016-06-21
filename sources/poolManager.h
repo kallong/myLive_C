@@ -10,8 +10,11 @@
 #define poolManager_h
 
 #include "baseHeader.h"
+#include "objects/baseObject.h"
 
 class poolManager {
+private:
+	std::vector<baseObject*> m_poolObjects;
 public:
     static poolManager* getInstance();
     poolManager();

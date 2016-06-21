@@ -8,8 +8,11 @@
 
 #include "objects/baseObject.h"
 
-baseObject::baseObject() {
-    
+baseObject::baseObject():
+m_retainCount(1)
+{
+	static unsigned int objectCount = 0;
+	m_ID = ++objectCount;
 }
 
 baseObject::~baseObject() {

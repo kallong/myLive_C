@@ -35,15 +35,23 @@ bool controlManager::init() {
 
 void controlManager::getCmd() {
     // std::cin >>m_cmd;
-	getline(std::cin, m_cmd);
+	getline(std::cin, m_cmd_str);
 }
 
 bool controlManager::doCMD() {
-	std::cout << m_cmd << std::endl;
-    if (m_cmd == "quit") {
+	std::cout << m_cmd_str << std::endl;
+	if (m_cmd_str == "quit") {
         gameManager::getInstance()->quit();
     }
     return true;
+}
+
+void controlManager::checkCMD() {
+
+}
+
+void controlManager::formatCMD() {
+
 }
 
 void controlManager::printCmd() {

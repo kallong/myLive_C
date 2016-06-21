@@ -16,6 +16,9 @@
     <Filter Include="sources">
       <UniqueIdentifier>{7ff06d0e-682d-4334-9dcd-0254d12452a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\objects">
+      <UniqueIdentifier>{106446e3-317a-4546-a1e3-f7b365ed48b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -27,9 +30,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\sources\baseHeader.h">
-      <Filter>sources</Filter>
-    </ClInclude>
     <ClInclude Include="..\sources\controlManager.h">
       <Filter>sources</Filter>
     </ClInclude>
@@ -38,6 +38,21 @@
     </ClInclude>
     <ClInclude Include="..\sources\gameManager.h">
       <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\poolManager.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\typeHeader.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\objects\baseObject.h">
+      <Filter>sources\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\baseHeader.h">
+      <Filter>sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sources\objects\roleObject.h">
+      <Filter>sources\objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +67,15 @@
     </ClCompile>
     <ClCompile Include="..\sources\gameManager.cpp">
       <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\poolManager.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\objects\baseObject.cpp">
+      <Filter>sources\objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sources\objects\roleObject.cpp">
+      <Filter>sources\objects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

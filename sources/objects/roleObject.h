@@ -16,7 +16,7 @@ class roleObjcet :public baseObject {
 public:
     roleObjcet();
     ~roleObjcet();
-    void update();
+    virtual void update();
 };
 
 #endif /* roleObject_h */

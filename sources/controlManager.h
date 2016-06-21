@@ -14,15 +14,17 @@
 class controlManager {
     
 private:
-    std::string m_cmd;
-
+    std::string m_cmd_str;
+	std::vector<std::string> m_cmd;
 public:
     static controlManager* getInstance();
     controlManager();
     ~controlManager();
     bool init();
     void getCmd();
-    bool doCMD();
+	bool doCMD();
+	void checkCMD();
+	void formatCMD();
     void printCmd();
 };
 

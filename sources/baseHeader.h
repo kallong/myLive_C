@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
+#include <vector>
 
 #include "typeHeader.h"
 
